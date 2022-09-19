@@ -29,3 +29,12 @@ docker logs -f spring-db-docker-0919_5 : 실시간 로그
 
 해결 :  8080:8080 으로 변경하여 컨테이너 빌드 하니까 정상적으로 되는것 확인
 원인 : 컨테이너 포트인 8080 톰캣을 통해 접근을 해야하는데 톰캣 포트를 지정을 안해줘서 생긴 오류
+
+
+
+보다 더 도커를 활용한 과정
+1. nginx proxy manager (/docker_projects/nginx_2)
+   1. vim docker-compose.yml 만들기
+   
+
+도커로 배포하는 과정 완료
