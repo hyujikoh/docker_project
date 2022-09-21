@@ -95,3 +95,35 @@ docker run \
   -d \
   sbdb
 ```
+
+
+
+
+#젠킨스 설치
+
+```
+docker run \
+-d \
+-p 8081:8080 \
+--restart unless-stopped \
+-e TZ=Asia/Seoul \
+-v /docker_projects/jenkins_1/var/jenkins_home:/var/jenkins_home \
+-v /var/run/docker.sock:/var/run/docker.sock \ // 도커 환경에서 안쪽 젠킨스로 들어가서 조작 가능하게 
+-v /docker_projects/nginx_1/data:/data \
+--name jenkins_1 \
+-u root \
+jenkins/jenkins:lts 
+```
+
+
+- 젠킨스 따라 하기
+    1. [http://url](http://url) ip 접근:8081(프로그램 설치후, 계정 설정 )
+    2. 프로젝트 설치후 생성
+    3. 프로젝트 만들기
+    4. 빌드 후 콘솔 출력 결과
+
+    ```bash
+    Building in workspace /var/jenkins_home/workspace/basic_work_1
+    ```
+    5. 프라이빗 프로젝트는 토큰 받아서 설정해라 
+    6. ngrok 설치 및 생성 
