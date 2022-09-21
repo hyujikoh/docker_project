@@ -126,4 +126,5 @@ jenkins/jenkins:lts
     Building in workspace /var/jenkins_home/workspace/basic_work_1
     ```
     5. 프라이빗 프로젝트는 토큰 받아서 설정해라 
-    6. ngrok 설치 및 생성 
+    6. ngrok 설치 및 생성
+    7. 수정
